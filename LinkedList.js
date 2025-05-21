@@ -24,6 +24,32 @@
 // };
 
 /**
+ * Two Pointer approach
+ */
+// var removeNthFromEnd = function(head, n) {
+//     const prev = head
+//     const pointer = head;
+
+//     const curr = head;
+
+//     let count = 0;
+//     while(curr != null){
+//         count ++;
+
+//         if(count >= n){
+//             prev = pointer
+//             pointer = pointer.next;
+//         }
+
+//         curr = curr.next
+//     }
+
+//     prev.next = pointer.next;
+
+//     return head;
+// };
+
+/**
  * 21. Merge Two Sorted Lists
  */
 // var mergeTwoLists = function(list1, list2) {

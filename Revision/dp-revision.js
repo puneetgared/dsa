@@ -288,3 +288,28 @@
 
 // const nums = [1,5,11,5]
 // console.log(canPartition(nums))
+
+/**
+ * 300. Longest Increasing Subsequence
+ */
+
+// var lengthOfLIS = function(nums) {
+    
+//     const dp = Array(nums.length).fill(1)
+
+
+//     console.log(dp)
+
+//     for(let i=1;i<nums.length;i++){
+//         for(let j=0;j<i;j++){
+//             if(nums[i] > nums[j]){
+//                 dp[i] = Math.max(dp[j]+1, dp[i])
+//             }
+//         }
+//     }
+//     console.log(dp)
+//     return Math.max(...dp)
+// };
+
+// const nums = [1,3,6,7,9,4,10,5,6]
+// console.log(lengthOfLIS(nums))

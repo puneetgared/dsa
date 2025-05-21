@@ -356,27 +356,27 @@
  * 205. Isomorphic Strings
  */
 
-var isIsomorphic = function(s, t) {
+// var isIsomorphic = function(s, t) {
     
-    if(s.length != t.length) return false;
+//     if(s.length != t.length) return false;
 
-    let mapST = new Map()
-    let mapTS = new Map()
+//     let mapST = new Map()
+//     let mapTS = new Map()
 
-    for(let i=0;i<s.length;i++){
-        const chS = s[i]
-        const chT = t[i]
+//     for(let i=0;i<s.length;i++){
+//         const chS = s[i]
+//         const chT = t[i]
         
-        if(mapST.has(chS) && mapST.get(chS) != chT
-            || mapTS.has(chT) && mapTS.get(chT) != chS){
-                return false;
-            }
+//         if(mapST.has(chS) && mapST.get(chS) != chT
+//             || mapTS.has(chT) && mapTS.get(chT) != chS){
+//                 return false;
+//             }
 
-            mapST.set(s[i], t[i])
-            mapTS.set(t[i],s[i])
-    }
-    return true;
-};
+//             mapST.set(s[i], t[i])
+//             mapTS.set(t[i],s[i])
+//     }
+//     return true;
+// };
 
-const s = "egg", t = "add"
-console.log(isIsomorphic(s,t))
+// const s = "egg", t = "add"
+// console.log(isIsomorphic(s,t))

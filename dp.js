@@ -121,7 +121,10 @@
 // console.log(longestCommonSubsequence("abcde","ace"))
 
 
-// Longest increasing subsequence
+/**
+ * 300. Longest Increasing Subsequence
+ */
+
 // const longestIncreasingSubsequence = (arr) => {
 //     // let dp = Array.from({length: arr.length}).fill(0)
 //     let dp = Array(arr.length).fill(1)
@@ -534,4 +537,81 @@ Given an integer array nums representing the amount of money of each house, retu
 
 
 
+/**
+ * 279. Perfect Squares
+ * 
+ * Example 1:
+    Input: n = 12
+    Output: 3
+    Explanation: 12 = 4 + 4 + 4
+ */
 
+// const numSquares = (n) => {
+
+//     const maxSqr = Math.floor(Math.sqrt(n))
+//     console.log(maxSqr)
+    
+//     const perfectSqrArr = [1]
+//     for(let i=4;perfectSqrArr.length < maxSqr;i++){
+//         if(Math.sqrt(i) % 1 == 0) perfectSqrArr.push(i)
+//     }
+//     console.log(perfectSqrArr)
+
+//     const dp = Array(n+1).fill(Infinity)
+//     dp[0] = 0
+    
+//    for(let sqr of perfectSqrArr){
+//         for(let i=sqr;i<=n;i++){
+//             const remain = i-sqr;
+//             dp[i] = Math.min(dp[i],dp[remain]+1)
+//         }
+//     }
+//     return dp[n]
+// }
+
+// console.log(numSquares(12))
+
+
+/**
+ * 70. Climbing Stairs
+ */
+
+// var climbStairs = function(n) {
+//     let dp = Array(n).fill(1)
+//     dp[1]=2
+
+//     for(let i=2;i<n;i++){
+//         dp[i] = dp[i-1] + dp[i-2]
+//     }
+//     return dp[n-1]
+// };
+
+// console.log(climbStairs(2))
+
+
+/**
+ * 62. Unique Paths
+ */
+
+var uniquePaths = function(m, n) {
+    const dp = Array.from({length: m}, () => Array(n).fill(0))
+
+    for(let i=0;i<m;i++){
+        dp[i][0] = 1
+    }
+    for(let i=0;i<n;i++){
+        dp[0][i] = 1
+    }
+    
+    for(let row=1; row< m;row++){
+        for(let col=1;col<n;col++){
+            dp[row][col] = dp[row-1][col] + dp[row][col-1]
+        }
+    }
+    dp
+
+    return dp[m-1][n-1]
+
+}
+const m = 3, n = 7
+console.log(uniquePaths(m,n))

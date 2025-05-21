@@ -522,3 +522,21 @@
 
 // const s = "the sky is blue"
 // console.log(reverseWords(s))
+
+
+
+/**
+ * 55. Jump Game
+ */
+
+// var canJump = function(nums) {
+//     let farthest = 0;
+ 
+//     for(let i=0;i<nums.length;i++){
+//          if(i > farthest) return false
+//          farthest = Math.max(i+nums[i], farthest)
+//          if(farthest >= nums.length-1) true
+//     }
+ 
+//     return true;
+//  };
